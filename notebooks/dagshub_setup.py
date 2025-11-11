@@ -2,7 +2,7 @@ import mlflow
 import dagshub
 
 mlflow.set_tracking_uri('https://dagshub.com/campusx-official/mlops-mini-project.mlflow')
-dagshub.init(repo_owner='campusx-official', repo_name='mlops-mini-project', mlflow=True)
+dagshub.init(repo_owner='Ajinkya-Hiwale', repo_name='mlops_mini-project-docker', mlflow=True)
 
 
 with mlflow.start_run():

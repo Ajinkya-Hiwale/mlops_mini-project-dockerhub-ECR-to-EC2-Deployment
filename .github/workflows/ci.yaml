@@ -26,7 +26,7 @@ jobs:
       - name: install dependencies
         run: |
           pip install -r requirements.txt
-      - name: run pipeline
+      - name: run pipeline for docker
         env:
           DAGSHUB_PAT: ${{secrets.DAGSHUB_PAT}}
         run: |
