@@ -50,13 +50,13 @@ jobs:
         if: success()
         uses: docker/login-action@v2
         with:
-          DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
-          DOCKER_HUB_ACCESS_TOKEN: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
+          username: ${{ secrets.DOCKER_HUB_USERNAME }}
+          password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       - name: Build docker image
         if: success()
         run: |
-          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/modek1.10:latest .
+          docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/model1.10:latest .
       - name: Push docker image to Docker Hub
         if: success()
         run: |
-          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/modek1.10:latest        
+          docker push ${{ secrets.DOCKER_HUB_USERNAME }}/model1.10:latest     
