@@ -73,10 +73,10 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-        script: |
-          docker pull ${{secrets.DOCKER_HUB_USERNAME}}/model1.10:latest
-          docker stop my-app || true
-          docker rm my-app || true
-          docker run -d --name my-app -p 80:5000  \
-          -e DAGSHUB_PAT=${{secrets.DAGSHUB_PAT}} \
-          ${{secrets.DOCKER_HUB_USERNAME}}/model1.10:latest
+          script: |
+            docker pull ${{secrets.DOCKER_HUB_USERNAME}}/model1.10:latest
+            docker stop my-app || true
+            docker rm my-app || true
+            docker run -d --name my-app -p 80:5000  \
+            -e DAGSHUB_PAT=${{secrets.DAGSHUB_PAT}} \
+            ${{secrets.DOCKER_HUB_USERNAME}}/model1.10:latest
