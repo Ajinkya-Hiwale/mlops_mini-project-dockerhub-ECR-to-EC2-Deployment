@@ -95,7 +95,7 @@ jobs:
           docker build -t campusxecr .
       - name: Tag Docker Image
         run: |
-          docker tag campusxecr:latest 983499853713.dkr.ecr.us-east-2.amazonaws.com/model1.10:latest
+          docker tag campusxecr:latest 983499853713.dkr.ecr.us-east-2.amazonaws.com/campusxecr:latest
       - name : Push Docker Image to ECR
         run: |
           docker push 983499853713.dkr.ecr.us-east-2.amazonaws.com/campusxecr:latest
