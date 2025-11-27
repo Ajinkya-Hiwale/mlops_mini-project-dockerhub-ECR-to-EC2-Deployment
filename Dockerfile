@@ -1,4 +1,5 @@
-FROM python:3.10-slim
+#by using slim version of python image we reduce the image size
+FROM python:3.10-slim  
 
 WORKDIR /app
 
